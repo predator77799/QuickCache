@@ -34,7 +34,7 @@ if [ "$USER" == "root" ]; then
 		if [ -z "$PORTS" ]; then
 			echo "[-]Error reading /etc/apache2/ports.config file. Please check if file is not empty."
 		else
-			sed -i 's/"Listen 80"/"Listen 8080"/g' /etc/apache2/ports.conf
+			sed -i 's/80/8080/g' /etc/apache2/ports.conf
 			echo "[+]/etc/apache2/ports.conf file configured."
 		fi
 		echo "[+]Configuring /etc/apache2/sites-available/000-default.conf file"
